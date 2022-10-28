@@ -82,9 +82,9 @@ const SignUp = () => {
     if (!fName || !lName || !role || !phone || !email || !password) {
       alert("Please provide value into each input field ");
     }else if (password.length < 8) {
-     alert( "Password must be more than 4 characters");
+     alert( "Password must be more than 8 characters");
     } else if (password.length > 16) {
-     alert ("Password cannot exceed more than 10 characters") 
+     alert ("Password cannot exceed more than 16 characters") 
     }else {
       axios
         .post("http://localhost:3100/register", {UID,fName,lName, role, phone, email, password }
